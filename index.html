@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="images/faicon.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speecher.js</title>
+</head>
+<body onselectstart="return false" oncontextmenu="return false" id='body'>
+    <center>
+        <input id='text' placeholder="Enter Text..." title='Enter Text (eg: Hello World!)'>
+        <br>
+        <input id='lang' placeholder="Enter Language Choice (eg: en-IN)" title='Enter Language Choice (eg: en-IN)'>
+        <br>
+        <button onclick='spk()'>Speak</button>
+        <br><br>
+        <strong>Note: You Are Hearing Speech Through speecher.js engine<br>Consider <a id='link' href='https://sancho1952007.github.io/' target='_blank'>Forking & Staring this Project on Github<img id='link_icon'></a>.</strong>
+        <br><br>
+        <a href='https://sancho1952007.github.io/' target='_blank'><img draggable="false" src='images/faicon.png' width="50%" height="500"></a>
+    </center>
+</body>
+<script src='main.js'>
+</script>
+
+<style>
+    input{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 25px;
+        width: 50%;
+        margin-bottom: 5px;
+        border-radius: 50px;
+        border: 2px solid;
+        outline: none;
+    }
+    button{
+        font-family:'Courier New', Courier, monospace;
+        font-size: 25px;
+        border-radius: 50px;
+        border: 2px solid;
+        outline: none;
+    }
+    strong{
+        font-weight: bold;
+        font-family: 'Courier New', Courier, monospace;
+        cursor: default;
+    }
+</style>
+
+<script>
+    function spk(){
+       speak(document.getElementById('lang').value, 1, 1, document.getElementById('text').value)
+    }
+
+    /* Detect Dark Mode... */
+    
+    function darkMode(){
+        document.querySelector('strong').style.color='white';
+        document.getElementById('body').style.backgroundColor = '#242424';
+        document.getElementById('link').style.color='lightblue';
+        document.getElementById('link_icon').src='images/link_.png';
+    }
+
+    function lightMode(){
+        document.getElementById('body').style.backgroundColor = 'white';
+        document.getElementById('link').style.color='blue';
+        document.getElementById('link_icon').src='images/link.png';
+    }
+
+    let matched = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if(matched){
+	  darkMode()
+    }
+    else{
+	  lightMode() 
+    }
+
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
+</script>
+
+</html>
