@@ -2,7 +2,7 @@
 
 ## ***How To Use (format to use) :-***
 ```html
-<script src='https://github.com/sancho1952007/Speecher.js/main.js'></script>
+<script src='http://yourjavascript.com/57513613272/main.js'></script>
 <script>
     speak(Language, Volume, Speech Rate, Text To Say)
 </script>
@@ -12,7 +12,7 @@
 
 ## ***Example :-***
 ```html
-<script src='https://github.com/sancho1952007/Speecher.js/main.js'></script>
+<script src='http://yourjavascript.com/57513613272/main.js'></script>
 <script>
     speak('en-IN', 1, 1, "Hello World!")
 </script>
@@ -24,4 +24,5 @@
 
 <br><br>
 
-# ***Note: This Repo. is Under Development... Thank You :)***
+## ***Note: This Does Not Work On Some Browsers!***
+# ***Thank You :)***
